@@ -150,7 +150,8 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
-      # Checkout code from git
+      - checkout
+      - install_awscli
       - run:
           name: Ensure frontend infrastructure exist
           command: |
