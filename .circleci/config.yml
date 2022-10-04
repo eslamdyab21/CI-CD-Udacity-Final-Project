@@ -73,13 +73,13 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys: [frontend-build-deps]
+          keys: [frontend-build-deps]
       - run:
-        name: frontend-test
-        command: |
-          cd frontend
-          npm install
-          npm test
+          name: frontend-test
+          command: |
+            cd frontend
+            npm install
+            npm test
 
                 
   test-backend:
@@ -88,13 +88,13 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        keys: [backend-build-deps]
+          keys: [backend-build-deps]
       - run:
-        name: backtend-test
-        command: |
-          cd backtend
-          npm install
-          npm test
+          name: backend-test
+          command: |
+            cd backend
+            npm install
+            npm test
             
 #   scan-frontend:
 #     docker:
