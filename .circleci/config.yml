@@ -148,7 +148,7 @@ jobs:
 
   deploy-infrastructure:
     docker:
-      amazon/aws-cli
+      - image: amazon/aws-cli
     steps:
       # Checkout code from git
       - run:
