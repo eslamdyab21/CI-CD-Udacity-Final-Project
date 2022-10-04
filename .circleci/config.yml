@@ -169,6 +169,7 @@ jobs:
             --tags project=udapeople \
             --stack-name "udapeople-backend-${CIRCLE_WORKFLOW_ID:0:7}" \
             --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"
+            echo aws cloudformation describe-stack-events --stack-name udapeople-backend-7bfe54c
 
       - run:
           name: Add back-end ip to ansible inventory
