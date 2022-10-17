@@ -1,4 +1,9 @@
 ---
+- name: "upgrade packages."
+  become: true
+  apt:
+    upgrade: "yes"
+
 - name: "install nodejs and npm dependencies"
   become: true
   apt:
@@ -8,7 +13,7 @@
 
 
 - name: "Install pm2"
-  become: yes
+  become: true
   npm:
     mame: pm2
     global: yes
