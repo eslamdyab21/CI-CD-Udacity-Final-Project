@@ -7,11 +7,6 @@
     update_cache: yes
 
 
-- name: "install nodejs 12.20.1"
-  become: yes
-  shell: n 12.20.1
-
-
 - name: "Install pm2"
   become: yes
   npm:
