@@ -17,6 +17,7 @@ commands:
       - run:
           name: Install Ansible
           command: |
+            sudo apt install python3-pip
             python3 -m pip install --user ansible
   
   install_tar:
@@ -25,7 +26,7 @@ commands:
       - run:
           name: Install Tar
           command: |
-             yum install -y tar tar
+             yum install -y tar
   
   install_gzip:
     description: Install gzip 
@@ -225,13 +226,12 @@ jobs:
       - run:
           name: Configure server
           command: |
-            # Your code here
             cat ~/project/.circleci/ansible/inventory.txt
             export ANSIBLE_HOST_KEY_CHECKING=False
             ansible-playbook -i ~/project/.circleci/ansible/inventory.txt ~/project/.circleci/ansible/configure-server.yml
       # Here's where you will add some code to rollback on failure    
-      - destroy-environment:
-          workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}  
+      # - destroy-environment:
+      #     workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}  
 
 #   run-migrations:
 #     docker:
