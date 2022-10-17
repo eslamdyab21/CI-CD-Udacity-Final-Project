@@ -15,5 +15,5 @@
 - name: "Install pm2"
   become: true
   npm:
-    mame: pm2
+    name: pm2
     global: yes
