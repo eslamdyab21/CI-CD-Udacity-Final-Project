@@ -17,6 +17,8 @@ commands:
       - run:
           name: Install Ansible
           command: |
+            sudo add-apt-repository universe
+            sudo apt-get update
             sudo apt install python3-pip
             python3 -m pip install --user ansible
   
