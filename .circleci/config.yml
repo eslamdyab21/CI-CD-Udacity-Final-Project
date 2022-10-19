@@ -19,8 +19,8 @@ commands:
           command: |
             sudo add-apt-repository universe
             sudo apt-get update
-            sudo apt install python3-pip
-            python3 -m pip install --user ansible
+            sudo apt install python3-pip -y
+            python3 -m pip install --user ansible -y
   
   install_tar:
     description: Install Tar 
