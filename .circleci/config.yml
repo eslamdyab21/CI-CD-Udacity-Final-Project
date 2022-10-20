@@ -447,8 +447,8 @@ jobs:
             export OldWorkflowID=$(curl --insecure https://kvdb.io/Y6b2ZPQ3hDBgshxxPuLk4T/old_workflow_id)
 
             echo OldWorkflowID: "${OldWorkflowID}"
-            
-            IFS=- read -r udapeople oldId <<< $OldWorkflowID
+            udapeople="${OldWorkflowID%-*}"
+            oldId="${OldWorkflowID#*-}"
 
             if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
             then
