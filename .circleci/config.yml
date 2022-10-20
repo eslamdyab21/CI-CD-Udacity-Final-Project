@@ -447,13 +447,14 @@ jobs:
             export OldWorkflowID=$(curl --insecure https://kvdb.io/Y6b2ZPQ3hDBgshxxPuLk4T/old_workflow_id)
 
             echo OldWorkflowID: ${OldWorkflowID}
-
+            IFS=- read -r udapeople oldId <<< "$OldWorkflowID"
 
             if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
             then
-              aws s3 rm "s3://udapeople-${OldWorkflowID}" --recursive
-              aws cloudformation delete-stack --stack-name "udapeople-backend-${OldWorkflowID}"
-              aws cloudformation delete-stack --stack-name "udapeople-frontend-${OldWorkflowID}"
+              echo removing old version
+              aws s3 rm "s3://$OldWorkflowID" --recursive
+              aws cloudformation delete-stack --stack-name "udapeople-backend-"${oldId}""
+              aws cloudformation delete-stack --stack-name "udapeople-frontend-"${oldId}""
             fi
             
 
