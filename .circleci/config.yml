@@ -450,10 +450,10 @@ jobs:
             udapeople="${OldWorkflowID%-*}"
             oldId="${OldWorkflowID#*-}"
 
-            if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
+            if [[ "${STACKS[@]}" =~ "${oldId}" ]]
             then
               echo "removing old version"
-              aws s3 rm "s3://$OldWorkflowID" --recursive
+              aws s3 rm s3://"${OldWorkflowID}" --recursive
               aws cloudformation delete-stack --stack-name "udapeople-backend-${oldId}"
               aws cloudformation delete-stack --stack-name "udapeople-frontend-${oldId}"
             fi
