@@ -334,8 +334,9 @@ jobs:
       - run:
           name: Deploy backend
           command: |
-            cd backend
             ls backend
+            cd backend
+            
             npm run build
             cd ..
 
