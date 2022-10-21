@@ -1,12 +1,3 @@
-# CI-CD-Udacity-Final-Project
-
-Archive: No
-Area: https://www.notion.so/Udacity-Advanced-Cloud-DevOps-394f3721bec54acfa8b211f96d7510c3
-Done: No
-Shared: No
-Siblings: https://www.notion.so/01501b7f55e34a65b09c2d38a24ec479, https://www.notion.so/0f7067f528984cf0b4124aa6ddaef1a4, https://www.notion.so/4c7aa8b0971d4b1293b9ee90ab35ab12, https://www.notion.so/5a71499e360c4106b34107762768364e
-To Share: No
-Work Time: 10/13/2022 → 10/20/2022
 
 # CI-CD-Udacity-Final-Project
 
@@ -104,5 +95,3 @@ cpu
 - [CloudFormation](https://aws.amazon.com/cloudformation/) - Infrastrcuture as code
 - [Ansible](https://www.ansible.com/) - Configuration management tool
 - [Prometheus](https://prometheus.io/) - Monitoring tool
-
-![Untitled](CI-CD-Udacity-Final-Project%204c7aa8b0971d4b1293b9ee90ab35ab12/Untitled%2021.png)
